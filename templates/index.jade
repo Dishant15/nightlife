@@ -1,5 +1,13 @@
-extends layout
+extends base
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.container.text-center
+		h1= title
+		p Welcome to #{title}
+		.box
+			.search-container
+				i.glyphicon.glyphicon-search
+				input#search(type='text', name='search', placeholder='Tell me where you are !!')
+
+block scripts
+	script(src="/javascripts/search.js")
