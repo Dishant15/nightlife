@@ -1,0 +1,15 @@
+extends base
+
+block content
+	.container-fluid
+		h1.text-center.mr-bot-30 Bars near your location
+
+		each bar in bar_list
+			#barblock.row
+				.col-sm-2
+					img(src="#{bar.image_url}")
+				.col-sm-8
+					h3 #{bar.name}
+					p #{bar.snippet_text}
+				.col-sm-2
+					.btn.btn-primary.center Going !!

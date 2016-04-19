@@ -22,7 +22,9 @@ var request_yelp = function(set_parameters, callback) {
 
   /* We can setup default parameters here */
   var default_parameters = {
-    location: 'San+Francisco',
+    // term : "bar",
+    category_filter : "bars",
+    limit : 20,
     sort: '2'
   };
 

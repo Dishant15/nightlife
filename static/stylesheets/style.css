@@ -9,6 +9,12 @@ a {
   color: #00B7FF;
 }
 
+.mr-bot-30 {
+  margin-bottom: 30px;
+}
+
+/*Searchbox css */
+
 .box {
    margin: 50px auto;
    width: 300px;
@@ -60,4 +66,18 @@ a {
    outline: none;
    background: #ffffff;
    color: #36465D !important;
+}
+
+/*Bars detail page block css*/
+
+#barblock {
+  background: white;
+  color: #36465D;
+  padding: 15px;
+  border: solid 1px grey;
+}
+
+.center {
+  width: 100%;
+  margin-top: 35px;
 }
