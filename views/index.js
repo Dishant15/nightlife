@@ -56,6 +56,7 @@ router.get('/bars/:ltype/:location', function(req, res) {
 									id : bar.id,
 									count : 0
 								});
+								callback();
 							});
 						} else {
 							// bar found use its dbbar
@@ -66,8 +67,9 @@ router.get('/bars/:ltype/:location', function(req, res) {
 								id : bar.id,
 								count : dbbar.count
 							});
+							callback();
 						}
-						callback();
+						
 					});
 						
 				},
@@ -76,6 +78,7 @@ router.get('/bars/:ltype/:location', function(req, res) {
 					res.render("details", {
 						title : "Bars | Nightlife",
 						bar_list : bar_list,
+						// pass path param to return user here after login
 						prev_path : '^bars^' + req.params.ltype + '^' + req.params.location,
 						loggeduser : req.user
 					});

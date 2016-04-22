@@ -2,14 +2,17 @@ extends base
 
 block content
 	.container.text-center
-		h1= title
-		p Welcome to #{title}
+		h1 Welcome to Nightlife
+		h3 Share where you will be going tonight!!
+		p created by Dishant Chavda
 		.box
 			.search-container
 				i.glyphicon.glyphicon-search
 				input#search(type='text', name='search', placeholder='Tell me where you are !!')
 
-		.btn.btn-danger#locsearch Search around me
+		.btn.btn-primary#locsearch
+			span.glyphicon.glyphicon-phone(aria-hidden="true") 
+			|  Search around me
 
 block scripts
 	script(src="/javascripts/search.js")

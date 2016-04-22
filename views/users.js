@@ -39,6 +39,7 @@ router.get('/login', function(req, res){
 	res.render("error", {message:"Twitter Login failed!!"});
 });
 
+// user going to this bar view
 router.get('/going/:bar/:user', function(req, res){
 	Bars.findOne({bar_id:req.params.bar}, function(err, dbbar){
 		if(err)throw err;
@@ -50,7 +51,6 @@ router.get('/going/:bar/:user', function(req, res){
 			dbbar.users.push(req.user.twitter_id);
 			dbbar.save(function(err){
 				if(err)throw err;
-				console.log("Increment success");
 				res.json({
 					count:dbbar.count
 				});
@@ -62,7 +62,6 @@ router.get('/going/:bar/:user', function(req, res){
 			if (index > -1) dbbar.users.splice(index, 1);
 			dbbar.save(function(err){
 				if(err)throw err;
-				console.log("Decrement success");
 				res.json({
 					count:dbbar.count
 				});
