@@ -17,7 +17,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'templates'));
 app.set('view engine', 'jade');
 
-var mongo_uri = "mongodb://localhost:27017/nightlife";
+var mongo_uri = "mongodb://dishant:root@ds013951.mlab.com:13951/heroku_twsf78h4";
 mongoose.connect(mongo_uri, function(err, db){
   if(err){
     console.log(err);
