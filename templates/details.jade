@@ -12,4 +12,16 @@ block content
 					h3 #{bar.name}
 					p #{bar.snippet_text}
 				.col-sm-2
-					.btn.btn-primary.center Going !!
+					#loggeduser
+					if loggeduser
+						button.togglegoing.btn.btn-primary.center( bar="#{bar.id}", user="#{loggeduser.twitter_id}")
+							span.count #{bar.count} 
+							|  Going !!
+					else
+						//- login user if not already logged in
+						a.btn.btn-primary.center(href="/users/pre/#{prev_path}")
+							span.count #{bar.count} 
+							|  Going !!
+
+block scripts
+	script(src="/javascripts/going.js")

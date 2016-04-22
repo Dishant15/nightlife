@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 
 var UserSchema = mongoose.Schema({
-        twitter_id : {type : String, unique : true, required : true},
+        twitter_id : {type : String, unique : true, required : true, index :true},
         name : String,
         time_stamp: { type: Date, default: Date.now }
     },
