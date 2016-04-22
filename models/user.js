@@ -21,7 +21,7 @@ var passport = require('passport')
 passport.use(new TwitterStrategy({
     consumerKey: "Fl3skzKigb91AEEXTZryudEeR",
     consumerSecret: "u6OIObdlUHBPJaTSiaa3QByiAEZH6l1Pu6VKqP4KbVWxj9N8t1",
-    callbackURL: "http://127.0.0.1:3000/users/twitter/callback"
+    callbackURL: "https://nightlife15.herokuapp.com/users/twitter/callback"
   },
   function(token, tokenSecret, profile, done) {
      //check user table for anyone with a facebook ID of profile.id
